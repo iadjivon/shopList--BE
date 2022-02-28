@@ -27,17 +27,17 @@ router.post("/", auth, async (req, res)=> {
 
         //write a function (conditional) that asks the shoplist item(the string) to be unique
 
-        const isDuplicate = () =>{ 
+        // const isDuplicate = () =>{ 
 
-        }
+        // }
 
-        return isDuplicate(req.body)
+        // return isDuplicate(req.body)
 
-        if (!isDuplicate(req.body)){
-            //add the item to the list
-        } else{
-            return null
-        }
+        // if (!isDuplicate(req.body)){
+        //     //add the item to the list
+        // } else{
+        //     return null
+        // }
 
     
     }

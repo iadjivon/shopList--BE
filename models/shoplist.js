@@ -5,7 +5,7 @@ const {Schema, model} = require("mongoose")
 //-----------------------------
 const shopListSchema = new Schema({
     username: {type: String, required: true}, //because one user can have multiple items in their shopping list, every shopping item cannot have a unique username. Though we want it to be unique in the user model
-    shopList: {type: String, required: true}
+    shopList: {type: String, required: true, unique: true}
   
 }, {timestamps: true})
 
