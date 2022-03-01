@@ -16,6 +16,9 @@ router.get("/", auth, async (req, res)=>{
     }
 })
 
+router.get("/", (req, res) => {
+    res.send("Hello mongo API all set");
+});
 
 //CREATE
 //---------------------------

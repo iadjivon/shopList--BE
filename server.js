@@ -27,11 +27,6 @@ app.use(express.json())
 app.use(express.static("public")) //parse any data that comes in encoded as json
 
 
-
-app.get("/", (req, res) => {
-    res.send("Hello mongo API all set");
-});
-
 // ROUTES & ROUTERS 
 // -----------------------------
 app.get("/", auth, (req, res) => {
