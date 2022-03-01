@@ -35,9 +35,11 @@ app.get("/", auth, (req, res) => {
 
 app.use("/auth", AuthRouter);
 
-app.use("/shoplist", ShopListRouter)
+app.use("/shoplist", ShopListRouter);
 
-
+app.get('/', (req, res) => {
+    res.send('Hello mongo API all set')
+});
 
 
 
