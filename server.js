@@ -26,15 +26,16 @@ app.use(morgan("tiny")) //logs route
 app.use(express.json()) 
 app.use(express.static("public")) //parse any data that comes in encoded as json
 
-app.get("/", (req, res) => {
-    res.send("Hello mongo API all set");
-});
+// app.get("/", (req, res) => {
+//     res.send("Hello mongo API all set");
+// });
 
 // ROUTES & ROUTERS 
 // -----------------------------
-// app.get("/", auth, (req, res) => {
-//     res.json(req.payload);
-// });
+app.get("/", auth, (req, res) => {
+    // res.json(req.payload);
+    res.send("Hello mongo API all set");
+});
 
 app.use("/auth", AuthRouter);
 
