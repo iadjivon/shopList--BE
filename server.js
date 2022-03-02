@@ -1,7 +1,6 @@
 // IMPORT DEPENDENCIES 
 // -----------------------------
 require("dotenv").config();
-
 const {PORT, NODE_ENV} = process.env ;
 const express = require("express");
 const app =  express();
@@ -27,9 +26,9 @@ app.use(morgan("tiny")) //logs route
 app.use(express.json()) 
 app.use(express.static("public")) //parse any data that comes in encoded as json
 
-// app.get("/", (req, res) => {
-//     res.send("Hello mongo API all set");
-// });
+app.get("/", (req, res) => {
+    res.send("Hello mongo API all set");
+});
 
 // ROUTES & ROUTERS 
 // -----------------------------
