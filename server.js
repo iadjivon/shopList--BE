@@ -1,7 +1,8 @@
 // IMPORT DEPENDENCIES 
 // -----------------------------
 require("dotenv").config();
-const {PORT, NODE_ENV} = process.env;
+
+const {PORT, NODE_ENV} = process.env ;
 const express = require("express");
 const app =  express();
 const mongoose = require('./db/conn');
@@ -26,9 +27,9 @@ app.use(morgan("tiny")) //logs route
 app.use(express.json()) 
 app.use(express.static("public")) //parse any data that comes in encoded as json
 
-app.get("/check", (req, res) => {
-    res.send("Hello mongo API all set");
-});
+// app.get("/", (req, res) => {
+//     res.send("Hello mongo API all set");
+// });
 
 // ROUTES & ROUTERS 
 // -----------------------------
@@ -50,4 +51,4 @@ app.use("/shoplist", ShopListRouter);
 // -----------------------------
 app.listen(PORT, () =>{
     console.log(`Listening on port ${PORT}`)
-})
+});
