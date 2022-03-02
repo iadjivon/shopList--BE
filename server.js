@@ -26,7 +26,9 @@ app.use(morgan("tiny")) //logs route
 app.use(express.json()) 
 app.use(express.static("public")) //parse any data that comes in encoded as json
 
-
+app.get("/", (req, res) => {
+    res.send("hello there");
+});
 
 // ROUTES & ROUTERS 
 // -----------------------------
