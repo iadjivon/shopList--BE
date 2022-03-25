@@ -1,5 +1,6 @@
 // IMPORT DEPENDENCIES 
 // -----------------------------
+const tracer = require('dd-trace').init({logInjection: true})
 require("dotenv").config();
 const {PORT, NODE_ENV} = process.env ;
 const express = require("express");
